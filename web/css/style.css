@@ -1,0 +1,91 @@
+body {
+  text-align: center
+}
+
+table {
+  widows: 22px;
+}
+
+td {
+  border:none;
+  background-color: rgba(239, 255, 244, 0.527);
+}
+
+.formClass {
+  display:inline-flex;
+}
+
+.selectClass {
+  margin-left: 5px;
+}
+
+.numberClass {
+  cursor:move;
+}
+
+.pClass {
+  margin: 0px 0px 0px 5px;
+  font-size: 18px;
+  display:inline-flex;
+}
+
+
+#event1 {
+  padding : 10px 0px 10px 0px;
+  background-color: rgb(202, 255, 195);
+}
+#event2 {
+  padding : 10px 0px 10px 0px;
+  margin : 10px 0px 10px 0px;
+  background-color: rgb(255, 203, 203);
+}
+#event3 {
+  padding : 10px 0px 10px 0px;
+  background-color: rgb(220, 231, 255);
+}
+
+#event_table1 {
+  text-align: center;
+}
+
+.numberClass {
+  background-color: rgba(253, 253, 253, 0.986);
+  width:30px;
+}
+
+.title_class {
+  background-color: rgba(170, 170, 170, 0.479);
+}
+
+.left_table {
+  display:inline-block;
+  margin-right: 15px;
+}
+
+.right_table {
+  display:inline-block;
+}
+
+
+.title_box {
+  margin-top: 10px;
+}
+
+.rule_box {
+  margin-top:15px; 
+  margin-bottom:15px;
+}
+
+.left_group_props {
+  margin-right:50px; 
+  display:inline-block;
+}
+
+.group_name {
+  margin-bottom: 10px;
+}
+
+.right_group_props {
+  display:inline-block;
+}
+
