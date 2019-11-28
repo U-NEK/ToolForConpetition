@@ -19,8 +19,9 @@ RUN apt install -y ./google-chrome-stable_current_amd64.deb
 RUN apt-get install -y fonts-migmix
 
 # Set japanese
-RUN apt-get install -y language-pack-ja-base language-pack-ja
+RUN apt-get install -y locales
 RUN locale-gen ja_JP.UTF-8
+RUN echo "export LANG=ja_JP.UTF-8" >> ∽/.bashrc
 
 # Set environment variables.
 ENV LANG ja_JP.UTF-8
