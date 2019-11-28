@@ -10,7 +10,7 @@ RUN unzip /tmp/chromedriver.zip chromedriver -d /usr/local/bin/
 RUN apt-get install -y libappindicator1 fonts-liberation libasound2 libnspr4 libnss3 libxss1 lsb-release xdg-utils 
 RUN touch /etc/default/google-chrome 
 RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb 
-RUN apt install ./google-chrome-stable_current_amd64.deb 
+RUN apt install -y ./google-chrome-stable_current_amd64.deb 
 RUN apt-get install -y fonts-migmix
 
 # Set japanese
