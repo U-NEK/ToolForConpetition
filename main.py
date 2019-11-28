@@ -79,14 +79,7 @@ def rowCreate(order, member, title, rule):
   if rule == "stock":   rowTag = rowOpenTag + rowSelectTag + rowCloseTag
   elif rule == "star":  rowTag = rowOpenTag + rowStockTag + rowCloseTag
   return rowTag.rstrip("\n")
-    
-app_options = {
-  "port" : 8088,
-  "chromeFlags": [
-    "--window-size=500,500"
-  ]
-}
 
 # print(openInifile_py())
 eel.init("web")
-eel.start("main.html", options=app_options)
+eel.start("main.html", size=(500,500), port=8088)
