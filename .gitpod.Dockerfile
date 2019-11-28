@@ -3,7 +3,7 @@ FROM python:3.7
 USER root
 
 RUN apt-get update && apt-get install -y bastet
-RUN apt-get install apt-utils
+RUN apt-get install -y apt-utils
 RUN apt-get install -y libfontconfig 
 RUN mkdir -p /home/root/src && cd $_ 
 RUN wget -q -O /tmp/chromedriver.zip http://chromedriver.storage.googleapis.com/`curl -sS chromedriver.storage.googleapis.com/LATEST_RELEASE`/chromedriver_linux64.zip
