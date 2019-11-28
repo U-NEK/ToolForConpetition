@@ -81,7 +81,7 @@ def rowCreate(order, member, title, rule):
   return rowTag.rstrip("\n")
     
 app_options = {
-  "port" = 8088,
+  "port" : 8088,
   "chromeFlags": [
     "--window-size=500,500"
   ]
