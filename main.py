@@ -82,4 +82,4 @@ def rowCreate(order, member, title, rule):
 
 # print(openInifile_py())
 eel.init("web")
-eel.start("main.html", size=(500,500), port=8088)
+eel.start("main.html", size=(500,500), port=8088, all_interfaces=True)
