@@ -21,7 +21,7 @@ RUN apt-get install -y fonts-migmix
 # Set japanese
 RUN apt-get install -y locales
 RUN locale-gen ja_JP.UTF-8
-RUN echo "export LANG=ja_JP.UTF-8" >> ∽/.bashrc
+RUN echo "export LANG=ja_JP.UTF-8"
 
 # Set environment variables.
 ENV LANG ja_JP.UTF-8
