@@ -3,7 +3,7 @@ FROM python:3.7
 USER root
 
 #apt-getする際のエラ〜を解除する　https://maku77.github.io/docker/term-error.html
-ENV DEBIAN_FRONTED noninteractive
+ENV DEBIAN_FRONTEND noninteractive
 
 #google chrome をダウンロードするコマンド　https://qiita.com/rotelstift/items/7dafcdcae3ca18b65b26
 RUN apt-get update && apt-get install -y bastet
