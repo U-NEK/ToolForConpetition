@@ -19,9 +19,6 @@ RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.d
 RUN apt install -y ./google-chrome-stable_current_amd64.deb 
 RUN apt-get install -y fonts-migmix
 
-RUN apt-get install -y python3-dev
-RUN apt-get install -y python-dev
-
 # Set japanese
 RUN apt-get install -y locales
 RUN locale-gen ja_JP.UTF-8
@@ -31,10 +28,13 @@ RUN echo "export LANG=ja_JP.UTF-8"
 ENV LANG ja_JP.UTF-8
 ENV PYTHONIOENCODIND utf_8git
 
-RUN pyenv install 3.6.4
+ENV LD_LIBRARY_PATH=/home/.pyenv
+
+RUN PYTHON_CONFIGURE_OPTS="--enable-shared" pyenv install 3.6.4
 RUN pyenv global 3.6.4
 RUN pip install --upgrade pip
-RUN pip install eel 
+RUN pipenv install eel
+RUN pipenv install pyinstaller
 #    && apt-get clean && rm -rf /var/cache/apt/* && rm -rf /var/lib/apt/lists/* && rm -rf /tmp/*
 #
 # More information: https://www.gitpod.io/docs/42_config_docker/
