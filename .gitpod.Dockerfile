@@ -29,8 +29,7 @@ ENV LANG ja_JP.UTF-8
 ENV PYTHONIOENCODIND utf_8git
 
 RUN pip install --upgrade pip
-RUN pipenv install eel
-RUN pipenv install pyinstaller
+
 #    && apt-get clean && rm -rf /var/cache/apt/* && rm -rf /var/lib/apt/lists/* && rm -rf /tmp/*
 #
 # More information: https://www.gitpod.io/docs/42_config_docker/
