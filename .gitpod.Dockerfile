@@ -1,4 +1,4 @@
-FROM python:3.7
+FROM gitpod/workspace-full-vnc
 
 USER root
 
@@ -8,6 +8,7 @@ ENV DEBIAN_FRONTEND noninteractive
 #google chrome をダウンロードするコマンド　https://qiita.com/rotelstift/items/7dafcdcae3ca18b65b26
 RUN apt-get update && apt-get install -y bastet
 RUN apt-get install -y apt-utils
+RUN apt-get install -y libgtk-3-dev
 RUN apt-get install -y libfontconfig 
 RUN mkdir -p /home/root/src && cd $_ 
 RUN wget -q -O /tmp/chromedriver.zip http://chromedriver.storage.googleapis.com/`curl -sS chromedriver.storage.googleapis.com/LATEST_RELEASE`/chromedriver_linux64.zip
@@ -25,7 +26,7 @@ RUN echo "export LANG=ja_JP.UTF-8"
 
 # Set environment variables.
 ENV LANG ja_JP.UTF-8
-ENV PYTHONIOENCODIND utf_8
+ENV PYTHONIOENCODIND utf_8git
   
 RUN pip install eel 
 #    && apt-get clean && rm -rf /var/cache/apt/* && rm -rf /var/lib/apt/lists/* && rm -rf /tmp/*
