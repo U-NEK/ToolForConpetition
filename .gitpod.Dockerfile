@@ -28,10 +28,9 @@ RUN echo "export LANG=ja_JP.UTF-8"
 ENV LANG ja_JP.UTF-8
 ENV PYTHONIOENCODIND utf_8git
 
-ENV LD_LIBRARY_PATH=/home/.pyenv
-
 RUN PYTHON_CONFIGURE_OPTS="--enable-shared" pyenv install 3.6.4
 RUN pyenv global 3.6.4
+ENV LD_LIBRARY_PATH=/home/.pyenv
 RUN pip install --upgrade pip
 RUN pipenv install eel
 RUN pipenv install pyinstaller
