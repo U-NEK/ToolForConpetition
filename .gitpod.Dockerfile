@@ -27,7 +27,10 @@ RUN echo "export LANG=ja_JP.UTF-8"
 # Set environment variables.
 ENV LANG ja_JP.UTF-8
 ENV PYTHONIOENCODIND utf_8git
-  
+
+RUN pyenv install 3.6.4
+RUN pyenv global 3.6.4
+RUN pip install --upgrade pip
 RUN pip install eel 
 #    && apt-get clean && rm -rf /var/cache/apt/* && rm -rf /var/lib/apt/lists/* && rm -rf /tmp/*
 #
