@@ -17,4 +17,5 @@ tasks:
 - command: pip install pylint
 - command: PYTHON_CONFIGURE_OPTS="--enable-shared" pyenv install 3.7.4
 - command: pyenv global 3.7.4
-- command: LD_LIBRARY_PATH=./home/gitpod/.pyenv/version/3.7.4/lib
+- command: pipenv install eel
+- command: pipenv install pyinstaller
